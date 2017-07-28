@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REVEAL: Community Ranking</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Exploring Twitter Communication Dynamics with Evolving Community Analysis">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="laaposto">
+
+    <link rel="shortcut icon" href="imgs/favicon.ico"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/nv.d3.css">
+    <!--END CSS -->
+
+</head>
+<body>
+<div id="myModal1" class="reveal-modal">
+    <h1>Oops! Something went wrong</h1>
+
+    <p>Please select a timeslot and community with data.</p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="myModal2" class="reveal-modal">
+    <div id="info">
+        <div id="info_photo"><a id="user_link" href="" target="_blank"><img src="" alt=""
+                                                                            onError="this.src='imgs/noprofile.gif';"/></a>
+        </div>
+        <div id="info_name">Name</div>
+        <div id="info_user"></div>
+        <div id="info_desc">Description text goes here</div>
+        <div id="info_loc"><img src="imgs/location.png" alt="error"/>Greece</div>
+        <div id="info_tweets" class="box" style="right:260px"><span>1270</span><br/><span>Tweets</span></div>
+        <div id="info_following" class="box" style="right:140px"><span>853</span><br/><span>Following</span></div>
+        <div id="info_followers" class="box" style="right:20px"><span>345</span><br/><span>Followers</span></div>
+    </div>
+
+    <div id="info_network_wrapper">
+        <div id="info_network"></div>
+    </div>
+
+    <div id="info_barchart_wrapper" class="with-3d-shadow with-transitions">
+        <div id="info_barchart">
+            <svg></svg>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="main_chart" class="with-3d-shadow with-transitions">
+    <svg></svg>
+</div>
+<div class="dropdown">
+    <div id="main_choice">Blobs Signify No. of Users</div>
+    <div id="down_arrow"><img src="imgs/down.png"/></div>
+    <div id="dropdown_menu">
+        <div id="up_arrow"></div>
+        <div>Users <i id="users_icon"><img src="imgs/users.png"/></i></div>
+        <div>Centrality <i id="cent_icon"><img src="imgs/cent.png"/></i></div>
+        <div>Connections <i id="connection_icon"><img src="imgs/conne.png"/></i></div>
+    </div>
+</div>
+<div id="selection_wrapper">
+    <div id="selection_network"></div>
+    <span id="next"></span>
+    <span id="prev"></span>
+
+    <div id="navigation_chart">
+        <svg></svg>
+    </div>
+    <img id="minimize" src="imgs/less.png" alt="close">
+    <img id="expand" src="imgs/more.png" alt="close" style=" display: none;">
+
+    <div id="back">Back to main</div>
+    <div class="user-profile">
+        <a id="user_page" href="" target="_blank"><img class="avatar" src="imgs/noprofile.gif" alt=""
+                                                       onError="this.src='imgs/noprofile.gif';"/></a>
+
+        <div class="username">Username</div>
+        <div class="bio"></div>
+        <div class="description">Description profile</div>
+        <div id="gauge"></div>
+        <ul class="data">
+            <li>
+                <span>1270</span>
+
+                <p>Tweets</p>
+            </li>
+            <li>
+                <span>853</span>
+
+                <p>Following</p>
+            </li>
+            <li>
+                <span>345</span>
+
+                <p>Followers</p>
+            </li>
+        </ul>
+        <div id="more"><img src="imgs/useradd.png" alt="close"/>More</div>
+        <p class="close" id="close_user"><img src="imgs/close.png" alt="close"/></p>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="linejs/d3.v3.js"></script>
+<script src="linejs/nv.d3liq.js"></script>
+<script src="linejs/lineChart.js"></script>
+<script src="linejs/jquery.reveal.js"></script>
+<script src="linejs/plot.js"></script>
+<script src="netjs/sigma.core.js"></script>
+<script src="netjs/conrad.js"></script>
+<script src="netjs/sigma.utils.js"></script>
+<script src="netjs/sigma.settings.js"></script>
+<script src="netjs/sigma.classes.dispatcher.js"></script>
+<script src="netjs/sigma.classes.configurable.js"></script>
+<script src="netjs/sigma.classes.graph.js"></script>
+<script src="netjs/sigma.classes.camera.js"></script>
+<script src="netjs/sigma.classes.quad.js"></script>
+<script src="netjs/sigma.captors.mouse.js"></script>
+<script src="netjs/sigma.captors.touch.js"></script>
+<script src="netjs/sigma.renderers.canvas.js"></script>
+<script src="netjs/sigma.canvas.labels.def.js"></script>
+<script src="netjs/sigma.canvas.nodes.def.js"></script>
+<script src="netjs/sigma.canvas.edges.curvedArrow.js"></script>
+<script src="netjs/sigma.middlewares.rescale.js"></script>
+<script src="netjs/sigma.misc.bindEvents.js"></script>
+<script src="netjs/sigma.misc.drawHovers.js"></script>
+<script src="netjs/worker.js"></script>
+<script src="netjs/supervisor.js"></script>
+<script src="netjs/plot.js"></script>
+<script src="netjs/raphael.2.1.0.min.js"></script>
+<script src="netjs/justgage.1.0.1.min.js"></script>
+
+</body>
+
+</html>
